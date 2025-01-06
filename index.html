@@ -39,7 +39,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody id="row"  >
                     <tr class="align-middle">
                         <td>1001</td>
                         <td>Chanrith</td>
@@ -60,6 +60,8 @@
     <!-- </Table container> -->
         
     </body>
+    <!-- @Link to Script js -->
+    <script defer src="script.js"></script>
 </html>
 
 
@@ -85,26 +87,30 @@
                     </div>
                     <div class="mb-3">
                         <label for="gender">Gender</label>
-                        <input id="gender" class="form-control" placeholder="e.g: 1001" type="text">
+                        <select id="gender" class="form-select">
+                            <option value="Prefer not provide">Prefer not provide</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="age">Age</label>
                         <input id="age" class="form-control" placeholder="Fill age ..." type="text">
                     </div>
                     <div class="mb-3">
-                        <label for="age">Date of birth</label>
-                        <input id="age" class="form-control" placeholder="Fill age ..." type="date">
+                        <label for="date">Date of birth</label>
+                        <input id="dob" class="form-control" placeholder="Fill age ..." type="date">
                     </div>
                     <div class="mb-3">
-                        <label for="age">Profile</label>
-                        <input id="age" class="form-control" type="file">
+                        <label for="profile">Profile</label>
+                        <input id="profile" class="form-control" type="file">
                     </div>
                 </form>
             </div>
             <!-- @Modal Footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i> Cancel</button>
-                <button type="button" class="btn btn-primary shadow"><i class="bi bi-cloud-download-fill"></i> Save User</button>
+                <button id="btn-submit" type="button" class="btn btn-primary shadow" data-bs-dismiss="modal"><i class="bi bi-cloud-download-fill" ></i>Save User</button>
             </div>
         </div>
     </div>
